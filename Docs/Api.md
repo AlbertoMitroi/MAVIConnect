@@ -1,5 +1,5 @@
 # MAVI Connect API
-
+ 
 - [MAVI Connect API]
   - [Auth](#auth)
     - [Register](#register)
