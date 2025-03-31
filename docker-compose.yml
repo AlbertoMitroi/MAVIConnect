@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: MAVI.API/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - mavi_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: MAVI.Client/Dockerfile
+    ports:
+      - "4200:80"
+    networks:
+      - mavi_network
+
+networks:
+  mavi_network:
