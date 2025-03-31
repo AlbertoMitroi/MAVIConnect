@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HV94H+eWd+c=",
+  "dgSpecHash": "ncM8BPX/Ns0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alberto.mitroi\\source\\repos\\MAVIConnect\\MAVI.Infrastructure\\MAVI.Infrastructure.csproj",
+  "projectFilePath": "D:\\probleme rezolvate\\SE\\MAVIConnect\\MAVI.Infrastructure\\MAVI.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\alberto.mitroi\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
-    "C:\\Users\\alberto.mitroi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\alberto.mitroi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\mario\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\mario\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\mario\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
