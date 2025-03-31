@@ -1,6 +1,0 @@
-@MAVI.API_HostAddress = http://localhost:5089
-
-GET {{MAVI.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
