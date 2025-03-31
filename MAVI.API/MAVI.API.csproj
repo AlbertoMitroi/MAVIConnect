@@ -12,4 +12,8 @@
     <ProjectReference Include="..\MAVI.Infrastructure\MAVI.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
+  </ItemGroup>
+
 </Project>
