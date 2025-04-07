@@ -1,15 +1,18 @@
-name: Build & Push
+name: Build & Push MAVI stack
 
 on:
   push:
     branches: [ "main" ]
 
+env:
+  DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USERNAME }}
+
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v4
 
     - name: Set up Docker Buildx
@@ -21,7 +24,8 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and Push with Docker Compose
-      run: |
-        docker compose build
-        docker compose push
+    - name: Build images with Docker Compose
+      run: docker compose build
+
+    - name: Push images to Docker Hub
+      run: docker compose push
