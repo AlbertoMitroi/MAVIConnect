@@ -35,6 +35,6 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: your-azure-app-name
+          app-name: mavi-connect
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           images: albertomtr/mavi-app:latest
