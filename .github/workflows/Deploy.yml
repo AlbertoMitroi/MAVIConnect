@@ -1,0 +1,39 @@
+name: Deploy to Azure Web App
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Login to ACR
+        uses: azure/docker-login@v1
+        with:
+          login-server: acrmaviconnect.azurecr.io
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - name: Build and Push Images
+        run: |
+          docker build -t acrmaviconnect.azurecr.io/maviconnect-backend -f MAVI.API/Dockerfile .
+          docker push acrmaviconnect.azurecr.io/maviconnect-backend
+
+          docker build -t acrmaviconnect.azurecr.io/maviconnect-frontend -f MAVI.Client/Dockerfile .
+          docker push acrmaviconnect.azurecr.io/maviconnect-frontend
+
+      - name: Restart Azure App Service
+        uses: Azure/webapps-deploy@v2
+        with:
+          app-name: app-maviconnect
+          slot-name: Production
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
