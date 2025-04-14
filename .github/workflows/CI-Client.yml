@@ -1,0 +1,37 @@
+name: CI Client
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'MAVI.Client/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+  actions: read
+
+jobs:
+  validate-angular:
+    name: Validate Angular App
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd MAVI.Client
+          npm ci
+
+      - name: Build Angular
+        run: |
+          cd MAVI.Client
+          npm run build -- --configuration production
