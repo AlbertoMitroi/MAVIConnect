@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'MAVI.Client/**'
   workflow_dispatch:
 
 jobs:
