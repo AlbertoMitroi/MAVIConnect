@@ -1,0 +1,23 @@
+/* Container principal al aplicației */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .app-body {
+    flex-grow: 1; /* Permite secțiunii principale să ocupe restul de spațiu disponibil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Header și Footer */
+  app-header, app-footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
