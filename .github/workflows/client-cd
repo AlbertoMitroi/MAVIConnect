@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'MAVI.Connect/**'
+      - 'MAVI.Client/**'
       - '.github/workflows/client-cd.yml'
 
 jobs:
