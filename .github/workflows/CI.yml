@@ -1,23 +1,19 @@
-name: PR Client
+name: CI
 
 on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'MAVI.Client/**'
-      - '.github/workflows/CI-PR.yml'
 
 permissions:
   contents: read
   pull-requests: write
   actions: read
-
+  
 jobs:
   validate-angular:
     name: Validate Angular App
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
 
@@ -35,3 +31,17 @@ jobs:
         run: |
           cd MAVI.Client
           npm run build -- --configuration production
+
+  validate-dotnet:
+    name: Validate .NET API
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.x'
+
+      - name: Restore and Build
+        run: dotnet build --configuration Release
