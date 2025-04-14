@@ -1,4 +1,4 @@
-name: PR Client
+name: CI Client
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'MAVI.Client/**'
-      - '.github/workflows/CI-PR.yml'
+      - '.github/workflows/**'
 
 permissions:
   contents: read
