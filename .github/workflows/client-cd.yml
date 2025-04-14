@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd MAVIConnect/MAVI.Client
+          cd MAVI.Client
           npm install
 
       - name: Build Angular app
