@@ -1,0 +1,23 @@
+<div class="landing-container">
+    <app-header></app-header>
+    <main class="hero-section">
+      <video #backgroundVideo class="background-video" autoplay muted loop playsinline>
+        <source src="videos/landing-page.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+  
+      <div class="video-overlay"></div>
+  
+      <div class="hero-content">
+        <h1>Welcome to MAVI Connect!</h1>
+        <p class="tagline">Connect with friends and discover new communities.</p>
+  
+        <div class="cta-buttons">
+          <button class="btn btn-register" (click)="navigateToRegister()">Register</button>
+          <button class="btn btn-login" (click)="navigateToLogin()">Login</button>
+        </div>
+      </div>
+    </main>
+    <app-footer></app-footer>
+  </div>
+  

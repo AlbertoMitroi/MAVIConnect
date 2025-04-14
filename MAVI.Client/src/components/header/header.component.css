@@ -1,0 +1,29 @@
+.app-header {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  } 
