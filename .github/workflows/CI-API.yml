@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'MAVI.Connect/**'
-      - '.github/workflows/CI-API.yml'
+      - '.github/workflows/**'
 
 permissions:
   contents: read
