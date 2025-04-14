@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'MAVI.Client/**'
+      - 'MAVIConnect/MAVI.Client/**'
       - '.github/workflows/client-cd.yml'
 
 jobs:
@@ -23,12 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd MAVI.Client
+          cd MAVIConnect/MAVI.Client
           npm install
 
       - name: Build Angular app
         run: |
-          cd MAVI.Client
+          cd MAVIConnect/MAVI.Client
           npm run build -- --configuration production
 
       - name: Deploy to Azure Static Web Apps
@@ -37,5 +37,5 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "MAVI.Client"
-          output_location: "dist/MAVI.Client"
+          app_location: "MAVIConnect/MAVI.Client"
+          output_location: "MAVIConnect/MAVI.Client/dist/mavi.client/browser"
