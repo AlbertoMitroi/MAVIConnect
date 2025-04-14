@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+  actions: read
+  
+jobs:
+  validate-angular:
+    name: Validate Angular App
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd MAVI.Client
+          npm ci
+
+      - name: Build Angular
+        run: |
+          cd MAVI.Client
+          npm run build -- --configuration production
+
+  validate-dotnet:
+    name: Validate .NET API
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.x'
+
+      - name: Restore and Build
+        run: dotnet build --configuration Release
