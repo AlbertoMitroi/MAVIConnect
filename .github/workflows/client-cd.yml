@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Angular app
         run: |
-          cd MAVIConnect/MAVI.Client
+          cd MAVI.Client
           npm run build -- --configuration production
 
       - name: Deploy to Azure Static Web Apps
@@ -37,5 +37,5 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "MAVIConnect/MAVI.Client"
-          output_location: "MAVIConnect/MAVI.Client/dist/mavi.client/browser"
+          app_location: "MAVI.Client"
+          output_location: "MAVI.Client/dist/mavi.client/browser"
