@@ -44,7 +44,7 @@ jobs:
           action: "upload"
           app_location: "./MAVI.Client"
           api_location: ""
-          output_location: "dist/mavi.client"
+          output_location: "dist/mavi.client/browser"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
