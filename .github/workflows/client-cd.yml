@@ -38,4 +38,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "MAVI.Client"
-          output_location: "MAVI.Client/dist/mavi.client/browser"
+          output_location: "dist/mavi.client/browser"
