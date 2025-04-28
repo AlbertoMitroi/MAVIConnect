@@ -2,18 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
-// Importă componentele copil
-import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { TopbarComponent } from "../../app/components/topbar/topbar.component";
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
   imports: [
     CommonModule,
-    HeaderComponent,
-    FooterComponent 
-  ],
+    FooterComponent,
+    TopbarComponent
+],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })

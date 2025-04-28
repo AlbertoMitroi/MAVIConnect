@@ -1,0 +1,79 @@
+<!-- Header -->
+<header id="main-header">
+    <div class="header-left">
+      <div class="menu-button">
+        <button onclick="toggleSidebar()">
+          ☰
+        </button>
+      </div>
+  
+      <div id="logo">
+        <a href="/home">
+          <img src="images/icons/logo.png" alt="Logo" class="logo-img" />
+          <span>MAVI Connect</span>
+        </a>
+      </div>
+    </div>
+  
+    <div class="header-center">
+      <form id="search-box">
+        <input type="text" placeholder="Search Posts, Friends..." />
+      </form>
+    </div>
+  
+    <div class="header-right">
+      <!-- Notification Button -->
+      <div class="notification">
+        <button id="notification-btn">
+          🔔
+          <div class="notification-count" id="notificationsCount">0</div>
+        </button>
+  
+        <!-- Notification Dropdown -->
+        <div id="notification-dropdown" class="dropdown hidden">
+          <h3>Notifications</h3>
+          <div class="dropdown-content">
+            No notifications...
+          </div>
+        </div>
+      </div>
+  
+      <!-- User Profile -->
+      <div class="profile">
+        <img src="images/icons/user.png" alt="User Avatar" class="profile-img" />
+  
+        <!-- Profile Dropdown -->
+        <div id="profile-dropdown" class="dropdown hidden">
+          <div class="profile-info">
+            <img src="images/icons/user.png" alt="User" class="profile-info-img" />
+            <div>
+              <h4>Ervis Trupja</h4>
+              <span>mavi</span>
+            </div>
+          </div>
+          <hr>
+          <a href="#">⚙️ My Account</a>
+          <hr>
+          <a href="#">🚪 Log Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script>
+    // Notification Dropdown
+    document.getElementById('notification-btn').addEventListener('click', function() {
+      document.getElementById('notification-dropdown').classList.toggle('hidden');
+    });
+  
+    // Profile Dropdown
+    document.querySelector('.profile-img').addEventListener('click', function() {
+      document.getElementById('profile-dropdown').classList.toggle('hidden');
+    });
+  
+    // Toggle Sidebar
+    function toggleSidebar() {
+      const sidebar = document.getElementById('site__sidebar');
+      sidebar.classList.toggle('active');
+    }
+  </script>
+  
