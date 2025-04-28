@@ -1,5 +1,11 @@
 <header class="app-header">
-    <nav class="navbar">
-      <div class="logo">MAVI Connect</div>
-      </nav>
-  </header>
+  <nav class="navbar">
+
+    <div class="logo" (click)="navigateHome()">
+      MAVI Connect
+    </div>
+
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+  </nav>
+</header>
