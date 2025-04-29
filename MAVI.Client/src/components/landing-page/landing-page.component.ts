@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 import { FooterComponent } from '../footer/footer.component';
-import { TopbarComponent } from "../../app/components/topbar/topbar.component";
+import { NavbarComponent } from "../../app/components/navbar/navbar.component";
 
 @Component({
   selector: 'app-landing-page',
@@ -11,7 +11,7 @@ import { TopbarComponent } from "../../app/components/topbar/topbar.component";
   imports: [
     CommonModule,
     FooterComponent,
-    TopbarComponent
+    NavbarComponent
 ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
