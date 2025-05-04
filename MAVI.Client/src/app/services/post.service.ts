@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Post } from '../models/Post';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { Post } from '../models/Post';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -136,8 +139,16 @@ export class PostService {
       commentsText: 'View all 15 comments'
     },
   ];
-
+  
   getPosts(): Observable<Post[]> {
     return of(this.posts);
   }
+
+  //private readonly baseUrl = environment.apiUrl;
+
+  //constructor(private http: HttpClient) {}
+
+  //getPosts(): Observable<Post[]> {
+  //  return this.http.get<Post[]>(`${this.baseUrl}/Post`);
+  //}
 }
