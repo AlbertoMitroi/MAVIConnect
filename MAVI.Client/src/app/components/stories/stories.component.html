@@ -1,0 +1,9 @@
+<div class="stories">
+    <div class="story" *ngFor="let story of stories">
+      <div class="profile-photo">
+        <img [src]="story.img" />
+      </div>
+      <p class="name">{{ story.name }}</p>
+    </div>
+  </div>
+  

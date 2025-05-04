@@ -1,0 +1,44 @@
+<div class="feed">
+  <div class="head">
+    <div class="user">
+      <div class="profile-photo">
+        <img [src]="post.userPhoto" />
+      </div>
+      <div class="ingo">
+        <h3>{{ post.username }}</h3>
+        <small>{{ post.time }}</small>
+      </div>
+    </div>
+    <span class="edit">
+      <i class="uil uil-ellipsis-h"></i>
+    </span>
+  </div>
+  <div class="photo">
+    <img [src]="post.photo" />
+  </div>
+  <div class="action-buttons">
+    <div class="interaction-buttons">
+      <span><i class="uil uil-heart"></i></span>
+      <span><i class="uil uil-comment-dots"></i></span>
+      <span><i class="uil uil-share-alt"></i></span>
+    </div>
+    <div class="bookmark">
+      <i class="uil uil-bookmark-full"></i>
+    </div>
+  </div>
+  <div class="liked-by">
+    <span *ngFor="let like of post.likesPhotos">
+      <img [src]="like" />
+    </span>
+    <p>
+      Liked by <b>{{ post.likedBy }}</b> and <b>{{ post.likesCount }} others</b>
+    </p>
+  </div>
+  <div class="caption">
+    <p>
+      <b>{{ post.username }}</b> {{ post.caption }}
+      <span class="harsh-tag">#{{ post.tag }}</span>
+    </p>
+  </div>
+  <div class="comments text-muted">{{ post.commentsText }}</div>
+</div>

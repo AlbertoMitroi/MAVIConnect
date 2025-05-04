@@ -1,0 +1,19 @@
+<div class="friend-requests">
+    <h4>Requests</h4>
+    <div class="request" *ngFor="let req of requests">
+      <div class="info">
+        <div class="profile-photo">
+          <img [src]="req.img" />
+        </div>
+        <div>
+          <h5>{{ req.name }}</h5>
+          <p class="text-muted">{{ req.mutual }} mutual friends</p>
+        </div>
+      </div>
+      <div class="action">
+        <button class="btn btn-primary">Accept</button>
+        <button class="btn">Decline</button>
+      </div>
+    </div>
+  </div>
+  

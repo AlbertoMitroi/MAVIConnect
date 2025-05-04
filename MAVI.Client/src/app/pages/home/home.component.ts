@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from "../../components/navbar/navbar.component";
-import { MainComponent } from "../../components/main/main.component";
+import { HomeMainComponent } from '../../components/home-main/home-main.component';
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, MainComponent],
+  imports: [NavbarComponent, HomeMainComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
