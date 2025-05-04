@@ -1,0 +1,12 @@
+<div class="notification-popup">
+    <div *ngFor="let notif of notifications">
+      <div class="profile-photo">
+        <img src="images/icons/user.png" />
+      </div>
+      <div class="notification-body">
+        <b>{{ notif.name }}</b> {{ notif.message }}
+        <small class="text-muted">{{ notif.time }}</small>
+      </div>
+    </div>
+  </div>
+  
