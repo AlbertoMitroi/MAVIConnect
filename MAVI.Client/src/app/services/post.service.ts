@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class PostService {
-  private posts: Post[] = [
+ private posts: Post[] = [
     {
       userPhoto: 'images/profile-1.jpg',
       username: 'john_doe',
@@ -139,16 +139,15 @@ export class PostService {
       commentsText: 'View all 15 comments'
     },
   ];
-  
-  getPosts(): Observable<Post[]> {
-    return of(this.posts);
-  }
-
-  //private readonly baseUrl = environment.apiUrl;
-
-  //constructor(private http: HttpClient) {}
-
-  //getPosts(): Observable<Post[]> {
-  //  return this.http.get<Post[]>(`${this.baseUrl}/Post`);
-  //}
+      getPosts(): Observable<Post[]> {
+        return of(this.posts);
+      }
 }
+   /* private readonly baseUrl = environment.apiUrl;
+
+      constructor(private http: HttpClient) {}
+
+      getPosts(): Observable<Post[]> {
+        return this.http.get<Post[]>(`${this.baseUrl}/Post`);
+      }
+    }*/

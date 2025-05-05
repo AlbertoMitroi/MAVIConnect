@@ -14,6 +14,7 @@ namespace MAVI.Infrastructure
             );  
 
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<IFriendRequestRepository, FriendRequestRepository>();
 
             return services;
         }
