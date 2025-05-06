@@ -14,8 +14,15 @@ namespace MAVI.API.Controllers.FriendRequests
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var friendRequests = await mediator.Send(new GetAllFriendRequestsQuery());
-            return Ok(friendRequests);
+            try
+            {
+                var friendRequests = await mediator.Send(new GetAllFriendRequestsQuery());
+                return Ok(friendRequests);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An unexpected error occurred: {ex.Message}");
+            }
         }
 
         [HttpGet("{id}")]
@@ -42,7 +49,7 @@ namespace MAVI.API.Controllers.FriendRequests
         public async Task<IActionResult> Delete(int id)
         {
             var success = await mediator.Send(new DeleteFriendRequestCommand(id));
-            
+
             if (!success)
             {
                 return NotFound();

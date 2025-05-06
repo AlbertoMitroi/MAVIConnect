@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://'
+    apiUrl: 'https://api-maviconnect.azurewebsites.net'
   };
