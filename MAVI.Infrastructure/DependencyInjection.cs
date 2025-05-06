@@ -1,4 +1,4 @@
-﻿using MAVI.DataAccess.Repositories;
+using MAVI.DataAccess.Repositories;
 using MAVI.Domain.Interfaces.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;

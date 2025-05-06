@@ -1,5 +1,6 @@
-﻿using MAVI.Domain.Models.FriendRequest;
+using MAVI.Domain.Models.FriendRequest;
 using MAVI.Domain.Models.Post;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVI.DataAccess
@@ -8,7 +9,6 @@ namespace MAVI.DataAccess
     {
         public DbSet<Post> Posts => Set<Post>();
         public DbSet<FriendRequest> FriendRequests => Set<FriendRequest>();
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

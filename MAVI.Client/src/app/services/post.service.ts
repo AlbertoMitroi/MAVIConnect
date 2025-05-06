@@ -139,15 +139,20 @@ export class PostService {
       commentsText: 'View all 15 comments'
     },
   ];
-      getPosts(): Observable<Post[]> {
-        return of(this.posts);
-      }
+     // getPosts(): Observable<Post[]> {
+    //    return of(this.posts);
+    //  }
+
+  
+  //getPosts(): Observable<Post[]> {
+   // return of(this.posts);
+  //}
+
+  //private readonly baseUrl = environment.apiUrl;
+
+  //constructor(private http: HttpClient) {}
+
+  //getPosts(): Observable<Post[]> {
+  //  return this.http.get<Post[]>(`${this.baseUrl}/Post`);
+  //}
 }
-   /* private readonly baseUrl = environment.apiUrl;
-
-      constructor(private http: HttpClient) {}
-
-      getPosts(): Observable<Post[]> {
-        return this.http.get<Post[]>(`${this.baseUrl}/Post`);
-      }
-    }*/
