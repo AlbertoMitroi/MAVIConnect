@@ -35,3 +35,13 @@ nav .create{
   align-items: center;
   gap: 2rem;
 }
+
+@media screen and (max-width: 992px) {
+  nav .search-bar input{
+    display: none;
+  }
+
+  nav .log{
+    font-size: 1.4rem;
+  }
+}

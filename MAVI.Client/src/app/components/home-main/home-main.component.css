@@ -62,10 +62,7 @@ main {
     }
   
     main .container .left {
-      grid-column: 3/4;
-      position: fixed;
-      bottom: 0;
-      right: 0;
+      display: none;
     }
   
     .left .notification-popup::before {
