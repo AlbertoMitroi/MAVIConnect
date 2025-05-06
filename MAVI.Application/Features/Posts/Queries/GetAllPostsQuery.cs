@@ -13,6 +13,7 @@ namespace MAVI.Application.Features.Posts.Queries
             var posts = await repository.GetAllAsync(cancellationToken);
             return posts
             .OrderByDescending(p => p.Time)
+            .ThenByDescending(p => p.Id)
             .Select(p => new PostDto
             {
                 Id = p.Id,
