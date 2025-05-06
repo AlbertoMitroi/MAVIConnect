@@ -1,4 +1,4 @@
-﻿using MAVI.DataAccess.Repositories;
+using MAVI.DataAccess.Repositories;
 using MAVI.Domain.Interfaces.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -14,6 +14,7 @@ namespace MAVI.Infrastructure
             );  
 
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<IFriendRequestRepository, FriendRequestRepository>();
 
             return services;
         }

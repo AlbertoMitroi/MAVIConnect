@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class PostService {
-  private posts: Post[] = [
+ private posts: Post[] = [
     {
       userPhoto: 'images/profile-1.jpg',
       username: 'john_doe',
@@ -139,10 +139,14 @@ export class PostService {
       commentsText: 'View all 15 comments'
     },
   ];
+     getPosts(): Observable<Post[]> {
+       return of(this.posts);
+    }
+
   
-  getPosts(): Observable<Post[]> {
-    return of(this.posts);
-  }
+  //getPosts(): Observable<Post[]> {
+   // return of(this.posts);
+  //}
 
   //private readonly baseUrl = environment.apiUrl;
 
