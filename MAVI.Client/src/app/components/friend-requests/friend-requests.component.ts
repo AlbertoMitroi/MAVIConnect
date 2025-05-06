@@ -15,7 +15,7 @@ export class FriendRequestsComponent {
   constructor(private requestService: FriendRequestService) {}
 
   ngOnInit(): void {
-    this.requestService.getRequests().subscribe(data => {
+    this.requestService.getFriendRequests().subscribe((data) => {
       this.requests = data;
     });
   }
