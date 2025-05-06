@@ -11,7 +11,9 @@ namespace MAVI.Application.Features.Posts.Queries
         public async Task<List<PostDto>> Handle(GetAllPostsQuery request, CancellationToken cancellationToken)
         {
             var posts = await repository.GetAllAsync(cancellationToken);
-            return posts.Select(p => new PostDto
+            return posts
+            .OrderByDescending(p => p.Time)
+            .Select(p => new PostDto
             {
                 Id = p.Id,
                 UserPhoto = p.UserPhoto,

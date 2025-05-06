@@ -11,7 +11,9 @@ namespace MAVI.Application.Features.FriendRequests.Queries
         {
             var requests = await repository.GetAllAsync(cancellationToken);
 
-            return requests.Select(r => new FriendRequestDto
+            return requests
+            .OrderByDescending(p => p.Id)
+            .Select(r => new FriendRequestDto
             {
                Id = r.Id,
                Img = r.Img,
