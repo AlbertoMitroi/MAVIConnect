@@ -13,7 +13,7 @@ import { environment } from '../../environments/environment';
   constructor(private http: HttpClient) {}
 
   getFriendRequests(): Observable<FriendRequest[]> {
-    return this.http.get<FriendRequest[]>(`${this.baseUrl}/FriendRequests`);
+    return this.http.get<FriendRequest[]>(`${this.baseUrl}/api/FriendRequests`);
   }
 }
 
