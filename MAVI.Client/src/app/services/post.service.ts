@@ -139,9 +139,9 @@ export class PostService {
       commentsText: 'View all 15 comments'
     },
   ];
-     // getPosts(): Observable<Post[]> {
-    //    return of(this.posts);
-    //  }
+     getPosts(): Observable<Post[]> {
+       return of(this.posts);
+    }
 
   
   //getPosts(): Observable<Post[]> {
