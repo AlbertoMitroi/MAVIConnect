@@ -20,7 +20,7 @@ var builder = WebApplication.CreateBuilder(args);
     {
         options.AddPolicy("AllowAngularApp", policy =>
         {
-            policy.WithOrigins("http://localhost:4200", "https://brave-sea-0d03a1c03.6.azurestaticapps.net/")
+            policy.WithOrigins("http://localhost:4200", "https://brave-sea-0d03a1c03.6.azurestaticapps.net")
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
