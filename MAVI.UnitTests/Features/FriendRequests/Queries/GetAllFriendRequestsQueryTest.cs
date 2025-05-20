@@ -3,7 +3,7 @@ using MAVI.Domain.Interfaces.Repositories;
 using MAVI.Domain.Models.FriendRequest;
 using Moq;
 
-namespace MAVI.UnitTests.Tests.FriendRequests
+namespace MAVI.Application.UnitTests.Features.FriendRequests.Queries
 {
    public sealed class GetAllFriendRequestsQueryTest
     {

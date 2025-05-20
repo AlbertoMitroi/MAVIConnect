@@ -1,6 +1,9 @@
 ﻿using MAVI.Application.DTOs;
 using MAVI.Domain.Interfaces.Repositories;
 using MediatR;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MAVI.Application.Features.Posts.Commands
 {
@@ -10,6 +13,12 @@ namespace MAVI.Application.Features.Posts.Commands
     {
         public async Task<bool> Handle(UpdatePostCommand request, CancellationToken cancellationToken)
         {
+            if (request.Post == null)
+                throw new ArgumentNullException(nameof(request.Post));
+
+            if (request.Post.Id <= 0)
+                throw new ArgumentException("Invalid Post ID.");
+
             var existingPost = await repository.GetByIdAsync(request.Post.Id, cancellationToken);
             if (existingPost == null)
                 return false;
