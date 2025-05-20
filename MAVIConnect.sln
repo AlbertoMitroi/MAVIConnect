@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAVI.Contracts", "MAVI.Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAVI.DataAccess", "MAVI.DataAccess\MAVI.DataAccess.csproj", "{529C0D9C-C3A3-4859-8CE5-2435B85C52CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAVI.UnitTests", "MAVI.UnitTests\MAVI.UnitTests.csproj", "{D96DE058-C45A-4C26-A3AC-7ADA4953982F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAVI.Application.UnitTests", "MAVI.UnitTests\MAVI.Application.UnitTests.csproj", "{D96DE058-C45A-4C26-A3AC-7ADA4953982F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
