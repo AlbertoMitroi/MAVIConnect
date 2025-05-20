@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAVI.Contracts", "MAVI.Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAVI.DataAccess", "MAVI.DataAccess\MAVI.DataAccess.csproj", "{529C0D9C-C3A3-4859-8CE5-2435B85C52CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAVI.UnitTests", "MAVI.UnitTests\MAVI.UnitTests.csproj", "{D96DE058-C45A-4C26-A3AC-7ADA4953982F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{529C0D9C-C3A3-4859-8CE5-2435B85C52CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{529C0D9C-C3A3-4859-8CE5-2435B85C52CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{529C0D9C-C3A3-4859-8CE5-2435B85C52CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D96DE058-C45A-4C26-A3AC-7ADA4953982F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D96DE058-C45A-4C26-A3AC-7ADA4953982F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D96DE058-C45A-4C26-A3AC-7ADA4953982F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D96DE058-C45A-4C26-A3AC-7ADA4953982F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
